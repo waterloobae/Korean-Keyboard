@@ -1,0 +1,89 @@
+body {
+	width:1020px;
+	height:590px;
+	margin:0px auto;
+    background:url(img/bg.png) center repeat;	
+}
+
+#wrapper {
+	width:1020px;
+}
+
+#copyString {
+	width: 650px;
+	height: 150px;	
+	margin: 10px;
+	padding: 10px;
+	font-size: 36px;
+	text-align:left;
+	line-height:1.2em;
+	color:#FBB117;
+	background-color: #302217;
+	border-style:ridge;
+	border-width:3px;
+    -webkit-border-top-left-radius: 20px;  
+    -webkit-border-top-right-radius: 20px;  
+    -webkit-border-bottom-right-radius: 20px;
+    -webkit-border-bottom-left-radius: 20px;	 	
+}
+
+.clearBoth { 
+	clear:both; 
+}
+
+#keyboardContainer {
+	margin: 5px 5px 5px;
+	padding: 5px 5px 5px;
+}
+
+#keyboardContainer div{
+	color: #000000;
+	float:left;
+	font-size: 24px;
+	font-weight: 900;
+    text-align:center;
+    margin:3px; 	
+}
+
+ul {
+	color:#302217;
+	font-weight:800;
+	font-style:italic;
+}
+
+li {
+	display:list-item;
+}
+
+#fontSize {
+	width:500px;
+}
+
+.cbutton {
+	height: 65px;
+	line-height: 65px;
+	width: 136px;
+    background:url(img/b.png) center no-repeat;	
+}
+
+.cbutton:hover, .cbutton:active{
+    background:url(img/bs.png) center no-repeat;	
+}
+
+.nbutton {
+	height: 65px;
+	line-height: 65px;
+	width: 65px;
+    background:url(img/s.png) center no-repeat;
+}
+
+.numbutton {
+	height: 65px;
+	line-height: 65px;
+	width: 65px;
+    background:url(img/n.png) center no-repeat;
+}
+
+.nbutton:hover, .nbutton:active, .numbutton:hover, .numbutton:active{
+    background:url(img/ss.png) center no-repeat;	
+}

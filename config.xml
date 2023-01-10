@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<widget xmlns="http://www.w3.org/ns/widgets" 
+   xmlns:rim="http://www.blackberry.com/ns/widgets" 
+   version="1.3.0.1" rim:header="Korean Hangul Keyboard">
+   <name>Korean KB</name>
+   <description>Korean Type, Tap and Hold Korean Hangul Keyboard</description>
+   <icon rim:hover="false" src="icon.png"/>
+   <icon rim:hover="true" src="icon.png"/>
+   <content src="index.html"/>
+   <feature id="blackberry.invoke" />
+   <feature id="blackberry.invoke.BrowserArguments" />
+   <feature id="blackberry.identity" />
+</widget>

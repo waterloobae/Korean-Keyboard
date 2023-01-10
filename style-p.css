@@ -1,0 +1,105 @@
+body {
+	width:590px;
+	padding:0px;
+	margin:0 auto;
+    background:url(img/bg.png) center repeat;
+}
+
+#wrapper {
+	width:590px;
+	height:1020px;
+	padding: 2px;	
+}
+
+#copyString {
+	width:550px;
+	height:350px;	
+	padding: 5px;
+	font-size: 32px;
+	text-align:left;
+	line-height:1.2em;
+	color:#FBB117;
+	background-color: #302217;
+	border-style:ridge;
+	border-width:3px;
+    -webkit-border-top-left-radius: 20px;  
+    -webkit-border-top-right-radius: 20px;  
+    -webkit-border-bottom-right-radius: 20px;
+    -webkit-border-bottom-left-radius: 20px;	 	
+}
+
+.clearBoth { 
+	clear:both; 
+}
+
+.clearBothSpace { 
+	clear:both;
+	margin:0px;
+	padding:0px;
+	width:570px;
+	height:15px; 
+}
+
+#keyboardContainer {
+	margin:6px;
+	padding: 2px;
+}
+
+#keyboardContainer div{
+	color: #000000;
+	float:left;
+	font-size: 22px;
+	font-weight: 900;
+    text-align:center;
+    margin:1px; 	
+}
+
+ul {
+	margin: 5px 0px;
+	color:#302217;
+	font-weight:800;
+	font-style:italic;
+}
+
+li {
+	display:list-item;
+}
+
+#fontSize {
+	width:400px;
+}
+
+.cbutton {
+	height: 65px;
+	line-height: 65px;
+	width: 102px;
+    background:url(img/pb.png) center no-repeat;	
+}
+
+.spacer {
+	height: 65px;
+	line-height: 65px;
+	width: 102px;
+}
+
+.cbutton:hover, .cbutton:active{
+    background:url(img/pbs.png) center no-repeat;	
+}
+
+.nbutton {
+	height: 65px;
+	line-height: 65px;
+	width: 50px;
+    background:url(img/ps.png) center no-repeat;
+}
+
+.numbutton {
+	height: 65px;
+	line-height: 65px;
+	width: 50px;
+    background:url(img/pn.png) center no-repeat;
+}
+
+.nbutton:hover, .nbutton:active, .numbutton:hover, .numbutton:active{
+    background:url(img/pss.png) center no-repeat;	
+}

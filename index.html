@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta name="viewport" content="user-scalable=no,initial-scale=1.0">
+<title>Korean Hangul Keyboard</title>
+<style type="text/css" media="screen,print">
+@import url("style.css");
+</style>
+<SCRIPT LANGUAGE="JavaScript" SRC="hkb.js"></SCRIPT>
+<script type="text/javascript" SRC="common.js"></script>
+<script type="text/javascript">
+function currentOrientation()
+{
+	if (window.orientation === undefined)
+	{
+		//setContent("currentOrientation", "<i><b>window.orientation</b> object is undefined.  This feature is not supported by the current application.</i>");
+		return false;
+	}
+
+	//var msg = "";
+	var str = "";
+	switch(window.orientation)
+	{
+		case 0:
+			//msg = "Top side up";
+			break;
+		case 90:
+			//msg = "Right side up";
+			str = document.getElementById("copyString").value;;
+			window.location.replace("index-p.html?" + str);
+			break;
+		case -90:
+			//msg = "Left side up";
+			str = document.getElementById("copyString").value;;
+			window.location.replace("index-p.html?" + str);
+			break;
+		case 180:
+			//msg = "Upside down";
+			break;
+	}
+	//msg = msg + " (" + window.orientation + "); " + ((screen.width >= screen.height) ? "Landscape" : "Portrait");
+	//setContent("currentOrientation", msg);	
+}
+
+
+function handleLoad(event)
+{
+	currentOrientation();
+	window.addEventListener("orientationchange", currentOrientation, true);
+}
+
+window.addEventListener("load", handleLoad, true);
+</script>
+</head>
+<body onLoad="init();">
+<div id="wrapper" name="wrapper">
+  <div id="keyboardContainer" name="keyboardContainer">
+    <table width="950px" border="0">
+      <tr>
+        <td colspan="3" align="center"><label> Font size: <span id="displayFontSize" name="dispalyFontSize" ></span> px
+          <input type="range" value="36" min="8" max ="100" step="4" id="fontSize" name="fontSize" onChange="changeFontSize();"/>
+          </label>
+        </td>
+      </tr>
+      <tr>
+        <td align="right" valign="middle"><div class="cbutton" x-blackberry-focusable="true"  name="google" id="google"  onclick="hSearch(this);">Google</div>
+          <div class="cbutton" x-blackberry-focusable="true"  name="bing" id="bing"  onclick="hSearch(this);">Bing</div></td>
+        <td align="center"><textarea onclick="edit(this);" onclick="edit(this);" onselect="edit(this);" id="copyString" name="copyString"></textarea>
+        </td>
+        <td align="left" valign="middle"><div class="cbutton" x-blackberry-focusable="true"  name="naver" id="naver"  onclick="hSearch(this);">Naver</div>
+          <div class="cbutton" x-blackberry-focusable="true"  name="daum" id="daum"  onclick="hSearch(this);">Daum</div></td>
+      </tr>
+
+    </table>
+    <div class="nbutton" x-blackberry-focusable="true"  name="k0" id="k0"  onclick="compose(this.id);"></div>
+    <div class="nbutton" x-blackberry-focusable="true"  name="k1" id="k1"  onclick="compose(this.id);"></div>
+    <div class="nbutton" x-blackberry-focusable="true"  name="k2" id="k2"  onclick="compose(this.id);"></div>
+    <div class="nbutton" x-blackberry-focusable="true"  name="k3" id="k3"  onclick="compose(this.id);"></div>
+    <div class="nbutton" x-blackberry-focusable="true"  name="k4" id="k4"  onclick="compose(this.id);"></div>
+    <div class="numbutton" x-blackberry-focusable="true" name="k5" id="k5"  onclick="compose(this.id);"></div>
+    <div class="numbutton" x-blackberry-focusable="true" name="k6" id="k6"  onclick="compose(this.id);"></div>
+    <div class="numbutton" x-blackberry-focusable="true" name="k7" id="k7"  onclick="compose(this.id);"></div>
+    <div class="nbutton" x-blackberry-focusable="true"  name="k8" id="k8"  onclick="compose(this.id);"></div>
+    <div class="nbutton" x-blackberry-focusable="true"  name="k9" id="k9"  onclick="compose(this.id);"></div>
+    <div class="nbutton" x-blackberry-focusable="true"  name="k10" id="k10"  onclick="compose(this.id);"></div>
+    <div class="nbutton" x-blackberry-focusable="true"  name="k11" id="k11"  onclick="compose(this.id);"></div>
+    <div class="nbutton" x-blackberry-focusable="true"  name="k12" id="k12"  onclick="compose(this.id);"></div>
+    <div class="nbutton" x-blackberry-focusable="true"  name="c6" id="c6" onclick="decompose();" style="font-size:36px; color:#FF0000; font-weight:900;">←</div>
+    <br />
+    <div class="nbutton" x-blackberry-focusable="true"  name="k13" id="k13"  onclick="compose(this.id);"></div>
+    <div class="nbutton" x-blackberry-focusable="true"  name="k14" id="k14"  onclick="compose(this.id);"></div>
+    <div class="nbutton" x-blackberry-focusable="true"  name="k15" id="k15"  onclick="compose(this.id);"></div>
+    <div class="nbutton" x-blackberry-focusable="true"  name="k16" id="k16"  onclick="compose(this.id);"></div>
+    <div class="nbutton" x-blackberry-focusable="true"  name="k17" id="k17"  onclick="compose(this.id);"></div>
+    <div class="numbutton" x-blackberry-focusable="true" name="k18" id="k18"  onclick="compose(this.id);"></div>
+    <div class="numbutton" x-blackberry-focusable="true" name="k19" id="k19"  onclick="compose(this.id);"></div>
+    <div class="numbutton" x-blackberry-focusable="true" name="k20" id="k20"  onclick="compose(this.id);"></div>
+    <div class="nbutton" x-blackberry-focusable="true"  name="k21" id="k21"  onclick="compose(this.id);"></div>
+    <div class="nbutton" x-blackberry-focusable="true"  name="k22" id="k22"  onclick="compose(this.id);"></div>
+    <div class="nbutton" x-blackberry-focusable="true"  name="k23" id="k23"  onclick="compose(this.id);"></div>
+    <div class="nbutton" x-blackberry-focusable="true"  name="k24" id="k24"  onclick="compose(this.id);"></div>
+    <div class="nbutton" x-blackberry-focusable="true"  name="k25" id="k25"  onclick="compose(this.id);"></div>
+    <div class="nbutton" x-blackberry-focusable="true"  name="k26" id="k26"  onclick="compose(this.id);"></div>
+    <br />
+    <div class="nbutton" x-blackberry-focusable="true"  name="k27" id="k27"  onclick="compose(this.id);"></div>
+    <div class="nbutton" x-blackberry-focusable="true"  name="k28" id="k28"  onclick="compose(this.id);"></div>
+    <div class="nbutton" x-blackberry-focusable="true"  name="k29" id="k29"  onclick="compose(this.id);"></div>
+    <div class="nbutton" x-blackberry-focusable="true"  name="k30" id="k30"  onclick="compose(this.id);"></div>
+    <div class="nbutton" x-blackberry-focusable="true"  name="k31" id="k31"  onclick="compose(this.id);"></div>
+    <div class="numbutton" x-blackberry-focusable="true" name="k32" id="k32"  onclick="compose(this.id);"></div>
+    <div class="numbutton" x-blackberry-focusable="true" name="k33" id="k33"  onclick="compose(this.id);"></div>
+    <div class="numbutton" x-blackberry-focusable="true" name="k34" id="k34"  onclick="compose(this.id);"></div>
+    <div class="nbutton" x-blackberry-focusable="true"  name="k35" id="k35"  onclick="compose(this.id);"></div>
+    <div class="nbutton" x-blackberry-focusable="true"  name="k36" id="k36"  onclick="compose(this.id);"></div>
+    <div class="nbutton" x-blackberry-focusable="true"  name="k37" id="k37"  onclick="compose(this.id);"></div>
+    <div class="nbutton" x-blackberry-focusable="true"  name="k38" id="k38"  onclick="compose(this.id);"></div>
+    <div class="cbutton" x-blackberry-focusable="true"  name="c0" id="c0"  onclick="compose(this.id);">return</div>
+    <br />
+    <div class="cbutton" x-blackberry-focusable="true"  name="c1" id="c1"  onclick="shiftKey();">shift</div>
+    <div class="cbutton" x-blackberry-focusable="true"  name="c2" id="c2"  onclick="compose(this.id);">space</div>
+    <div class="nbutton" x-blackberry-focusable="true"  name="k39" id="k39"  onclick="compose(this.id);"></div>
+    <div class="numbutton" x-blackberry-focusable="true" name="k40" id="k40"  onclick="compose(this.id);"></div>
+    <div class="nbutton" x-blackberry-focusable="true"  name="k41" id="k41"  onclick="compose(this.id);"></div>
+    <div class="nbutton" x-blackberry-focusable="true"  name="c3" id="c3"  onclick="compose(this.id);">w3</div>
+    <div class="cbutton" x-blackberry-focusable="true"  name="c7" id="c7"  onclick="deleteAll();">RESET</div>
+    <div class="cbutton" x-blackberry-focusable="true"  name="c5" id="c5"  onclick="toggleLanguage();">한영전환</div>
+    <div class="cbutton" x-blackberry-focusable="true"  name="c4" id="c4"  onclick="shiftKey();">shift</div>
+  </div>
+</div>
+</div>
+<div class="clearBoth"></div>
+  <ul type="disc" class="instruction">
+    <li>Please tap and hold  the typed text  to copy or the button to search. Use slide bar to change the font size.</li>
+    <li>입력 후 문구를 터치하면 복사가 가능하며, 버튼을 누르시면 직접 검색이 됩니다. 슬라이드로 글꼴 크기를 변경할 수 있습니다.</li>
+  </ul>  
+<audio id="keysound" name="keysound">
+  <source src="click.wav">
+</audio>
+</body>
+</html>
